@@ -22,13 +22,35 @@ let dogs = [{
 
 let randomIndex;
 let animating = false;
+let char = [];
+let button;
+
+function preload(){
+
+	for(let i = 0; i <= 15; i++){
+		char[i] = loadImage(`assets/char_${i}.jpg`)
+	}
+	for(let i = 0; i <= 15; i++){
+		char[i] = loadImage(`assets/char_${i}.jpeg`)
+	}
+	for(let i = 0; i <= 15; i++){
+		char[i] = loadImage(`assets/char_${i}.png`)
+	}
+
+}
 
 function setup() {
 	createCanvas(600, 600);
 	background(200);
 	textSize(32);
+	imageMode(CENTER);
+	frameRate(12);
 
 	text("click to randomize", 50, 50);
+	button = createButton("click to randomize");
+	button.mousePressed(buttonPressed);
+
+	console.log(char);
 
 
 
@@ -37,7 +59,15 @@ function setup() {
 function draw(){
 
 	if (animating == true){
-		ellipse(random(width), random(height), random(50, 200));
+		clear();
+		image(char[imageCounter], width/2, height/2);
+
+		if (imageCounter < char.length) {
+			imageCounter++;
+			console.log(imageCounter);
+		}else{
+			imageCounter = 0;
+		}
 
 	}
 
@@ -48,10 +78,11 @@ function randomizer(){
 
 	if (dogs[0]){
 
-	background(random(200, 255));
+	//background(random(200, 255));
 	randomIndex = int(random(dogs.length));
 	text(dogs[randomIndex].name + "'s favorite color is " + 
 		dogs[randomIndex].color, 50, 50);
+	image(random(char), width/2, height/2);
 	dogs.splice(randomIndex, 1);
 } else {
 	background(random(200, 255));
@@ -60,7 +91,7 @@ function randomizer(){
 
 }
 
-function mousePressed(){
+function buttonPressed(){
 	animating = true;
 	setTimeout(randomizer, 2000);
 
