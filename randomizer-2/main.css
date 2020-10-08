@@ -6,20 +6,43 @@ body {
   padding: 30px 20px;
 }
 
+.header {
+  background-color: #eee;
+  height: 90px;
+
+  
+  background-image: url(bg.png);
+  background-size: cover;
+}
+
 .h1 {
-  font-style: "Helvetica";
-  color: red;
+  font-style: "Arial";
+  text-shadow: 2px 2px #ff0000;
+  color: #8ef5e4;
   padding: 20px 0px 10px 0px;
   text-align: center;
   font-size: 30px;
 }
 
 .a {
-color: #69CBBB;
+color: #6cebd6;
 text-decoration: none;
 }
 
+.column {
+  float: right;
+}
+
 .randomButton {
+	border: none;
 	padding: 20px;
-	background-color: #32a8a4;
+	background-color: #f7487c;
+	font-size: 16px;
+	color: #ffffff;
+	transition-duration: 0.4s;
+}
+
+.randomButton: hover {
+  background-color: #ffffff;
+  color: white;
 }

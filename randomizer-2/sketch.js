@@ -71,6 +71,7 @@ function setup() {
 	button.mousePressed(buttonPressed);
 	button.class("randomButton");
 
+
 	console.log(char);
 
 
@@ -99,14 +100,14 @@ function randomizer(){
 
 	if (dogs[0]){
 
-	background(random(200, 255));
+	background(230, 255, 251);
 	randomIndex = int(random(dogs.length));
 	text(dogs[randomIndex].name + dogs[randomIndex].color, 50, 50);
 	image(random(char), width/2, height/2);
 	dogs.splice(randomIndex, 1);
 } else {
 	background(random(200, 255));
-	text("nothing left", 50, 50);
+	text("Nothing left", 50, 50);
 	}
 
 }
