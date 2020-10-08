@@ -62,8 +62,8 @@ function preload(){
 
 function setup() {
 	createCanvas(600, 600);
-	background(200);
-	textSize(28);
+	background(230, 255, 251);
+	textSize(25);
 	imageMode(CENTER);
 	frameRate(12);
 
@@ -102,7 +102,7 @@ function randomizer(){
 
 	background(230, 255, 251);
 	randomIndex = int(random(dogs.length));
-	text(dogs[randomIndex].name + dogs[randomIndex].color, 50, 50);
+	text(dogs[randomIndex].name + dogs[randomIndex].color, 100, 580);
 	image(random(char), width/2, height/2);
 	dogs.splice(randomIndex, 1);
 } else {
