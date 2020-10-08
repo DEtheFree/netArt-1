@@ -28,12 +28,6 @@ let button;
 function preload(){
 
 	for(let i = 0; i <= 15; i++){
-		char[i] = loadImage(`assets/char_${i}.jpg`)
-	}
-	for(let i = 0; i <= 15; i++){
-		char[i] = loadImage(`assets/char_${i}.jpeg`)
-	}
-	for(let i = 0; i <= 15; i++){
 		char[i] = loadImage(`assets/char_${i}.png`)
 	}
 
