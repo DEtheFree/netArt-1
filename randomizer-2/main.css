@@ -6,12 +6,20 @@ body {
   padding: 30px 20px;
 }
 
-h1 {
+.h1 {
+  font-style: "Helvetica";
   color: red;
   padding: 20px 0px 10px 0px;
+  text-align: center;
+  font-size: 30px;
 }
 
-a {
+.a {
 color: #69CBBB;
 text-decoration: none;
+}
+
+.randomButton {
+	padding: 20px;
+	background-color: #32a8a4;
 }

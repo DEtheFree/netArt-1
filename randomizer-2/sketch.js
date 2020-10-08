@@ -1,23 +1,50 @@
 // randomizer
 
 let dogs = [{
-	name: "mario", 
-	color: "red"
+	name: "Hometown:", 
+	color: " Sector 7 slums"
 }, {
-	name: "luigi", 
-	color: "green"
+	name: "Hometown:", 
+	color: " Mushroom Kingdom"
 }, {
-	name: "waluigi", 
-	color: "purple"
+	name: "Hometown:", 
+	color: " Liyue"
 }, {
-	name: "wario", 
-	color: "yellow"
+	name: "Hometown:", 
+	color: " Pallet Town"
 }, {
-	name: "peach", 
-	color: "pink"
+	name: "Hometown:", 
+	color: " San Andreas"
 }, {
-	name: "toad", 
-	color: "white"
+	name: "Hometown:", 
+	color: " The Sims custom house"
+}, {
+	name: "Hometown:", 
+	color: " Tsushima"
+}, {
+	name: "Hometown:", 
+	color: " Sparta"
+}, {
+	name: "Hometown:", 
+	color: " Green Hill Zone"
+}, {
+	name: "Hometown:", 
+	color: " Destiny Island"
+},{
+	name: "Hometown:", 
+	color: " Skeld from Among Us"
+}, {
+	name: "Hometown:", 
+	color: " Fall Guys' Fall Mountain"
+}, {
+	name: "Hometown:", 
+	color: " Summoner's Rift"
+}, {
+	name: "Hometown:", 
+	color: " Raccoon City"
+}, {
+	name: "Hometown:", 
+	color: " Hyrule"
 }];
 
 let randomIndex;
@@ -27,7 +54,7 @@ let button;
 
 function preload(){
 
-	for(let i = 0; i <= 15; i++){
+	for(let i = 0; i <= 14; i++){
 		char[i] = loadImage(`assets/char_${i}.png`)
 	}
 
@@ -36,13 +63,13 @@ function preload(){
 function setup() {
 	createCanvas(600, 600);
 	background(200);
-	textSize(32);
+	textSize(28);
 	imageMode(CENTER);
 	frameRate(12);
 
-	text("click to randomize", 50, 50);
-	button = createButton("click to randomize");
+	button = createButton("Randomize");
 	button.mousePressed(buttonPressed);
+	button.class("randomButton");
 
 	console.log(char);
 
@@ -72,10 +99,9 @@ function randomizer(){
 
 	if (dogs[0]){
 
-	//background(random(200, 255));
+	background(random(200, 255));
 	randomIndex = int(random(dogs.length));
-	text(dogs[randomIndex].name + "'s favorite color is " + 
-		dogs[randomIndex].color, 50, 50);
+	text(dogs[randomIndex].name + dogs[randomIndex].color, 50, 50);
 	image(random(char), width/2, height/2);
 	dogs.splice(randomIndex, 1);
 } else {
@@ -87,7 +113,7 @@ function randomizer(){
 
 function buttonPressed(){
 	animating = true;
-	setTimeout(randomizer, 2000);
+	setTimeout(randomizer, 1000);
 
 
 
