@@ -1,17 +1,49 @@
 body {
-  margin: 30px auto;
+  margin: .5px auto;
   max-width: 1000px;
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: "Verdana", "Courier", sans-serif;
   line-height: 1.5;
   padding: 30px 20px;
 }
 
-h1 {
-  color: red;
-  padding: 20px 0px 10px 0px;
+.header {
+  background-color: #eee;
+  height: 90px;
+
+  
+  background-image: url(bg.png);
+  background-size: cover;
+  background-position: bottom left;
 }
 
-a {
-color: #69CBBB;
+.h1 {
+  font-style: "Arial";
+  text-shadow: 2px 2px #ff0000;
+  color: #8ef5e4;
+  padding: 20px 0px 10px 0px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.a {
+color: #6cebd6;
 text-decoration: none;
+}
+
+.column {
+  float: right;
+}
+
+.randomButton {
+	border: none;
+	padding: 20px;
+	background-color: #f7487c;
+	font-size: 16px;
+	color: #ffffff;
+	transition-duration: 0.4s;
+}
+
+.randomButton: hover {
+  background-color: #ffffff;
+  color: white;
 }
